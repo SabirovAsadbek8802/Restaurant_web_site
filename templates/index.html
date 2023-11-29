@@ -1,0 +1,1022 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+        <!-- main body end -->
+        <main>
+            <!-- hero start -->
+            <section class="hero_area hero_3 section_notch_bottom" data-background="{% static 'assets/img/bg/hero_bg_ing_02.jpg' %}">
+                <div class="hero_wrap hero_height">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                               <div class="hero_content_wrap text-center">
+                                    <div class="hero_text">
+                                        <h2>Delecious <span>Food</span></h2>
+                                    </div>
+                                    <div class="hero_img">
+                                        <img src="{% static 'assets/img/hero/img_03.png' %}" alt="">
+                                    </div>
+                                    <div class="hero_feat_wrap">
+                                        <div class="hf_single sf_01">
+                                            <h4>HOT SPICY</h4>
+                                            <p>Chicken with Much Tomato and Chilis Part</p>
+                                            <div class="hf_shape">
+                                                <img src="{% static 'assets/img/shape/hf_01.png' %}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="hf_single sf_02">
+                                            <div class="hf_shape">
+                                                <img src="{% static 'assets/img/shape/hf_02.png' %}" alt="">
+                                            </div>
+                                            <h4>2X DECKER</h4>
+                                            <p>Double Decker Chicken For only $ 9,00</p>
+                                        </div>
+                                    </div>
+                                    <div class="hero_shape">
+                                        <img class="shape hs_01" src="{% static 'assets/img/shape/hs_01.png' %}" alt="">
+                                        <img class="shape hs_02" src="{% static 'assets/img/shape/hs_02.png' %}" alt="">
+                                        <img class="shape his_01" src="{% static 'assets/img/shape/his_01.png' %}" alt="">
+                                        <img class="shape his_02" src="{% static 'assets/img/shape/his_02.png' %}" alt="">
+                                    </div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- hero end -->
+
+            <!-- services start -->
+            <section class="services_area services_space white_bg">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="services_img">
+                                <img src="{% static 'assets/img/bg/services_bg.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="services_content">
+                                <div class="sec_title">
+                                    <span>Quality Service</span>
+                                    <h2>Good Food, Drinks and Great Company.</h2>
+                                    <p>As well known and we are very busy all days advice you. advice you to call us of before arriving, so we can guarantee your seat. advice you to call us of before arriving As well known and we are very busy.</p>
+                                    <p>We appreciate your trust greatly. Our clients choose us and our services because they know we are the best.</p>
+                                </div>
+                                <div class="experience_text">
+                                    <h1>24<span>+</span></h1>
+                                    <h2><span>Years Of</span> <br>Experience</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- services end -->
+
+            <!-- recipe menu start -->
+            <section class="recipe_menu_area pt-120 pb-120 section_notch_top">
+                <div class="container">
+                    <div class="sec_title sec_title-2">
+                        <span>Choose and Try</span>
+                        <h2>From Our Menu</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-l2">
+                            <div class="recipe_menu_wrap">
+                                <ul class="nav nav-tabs recipe_menu" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a href="#" class="nav-link" id="nav-tab-01" data-bs-toggle="tab" data-bs-target="#tab-01" role="tab" aria-controls="tab-01" aria-selected="true">
+                                            <span class="icon">
+                                                <img src="{% static 'assets/img/icon/m_icon_01.png' %}" alt="">
+                                            </span>
+                                            <span class="title">Drinks</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a href="#" class="nav-link active" id="nav-tab-02" data-bs-toggle="tab" data-bs-target="#tab-02" role="tab" aria-controls="tab-02" aria-selected="false">
+                                            <span class="icon">
+                                                <img src="{% static 'assets/img/icon/m_icon_02.png' %}" alt="">
+                                            </span>
+                                            <span class="title">Stack</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a href="#" class="nav-link" id="nav-tab-03" data-bs-toggle="tab" data-bs-target="#tab-03" role="tab" aria-controls="tab-03" aria-selected="false">
+                                            <span class="icon">
+                                                <img src="{% static 'assets/img/icon/m_icon_03.png' %}" alt="">
+                                            </span>
+                                            <span class="title">Burger</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a href="#" class="nav-link" id="nav-tab-04" data-bs-toggle="tab" data-bs-target="#tab-04" role="tab" aria-controls="tab-04" aria-selected="false">
+                                            <span class="icon">
+                                                <img src="{% static 'assets/img/icon/m_icon_04.png' %}" alt="">
+                                            </span>
+                                            <span class="title">Chicken</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a href="#" class="nav-link" id="nav-tab-05" data-bs-toggle="tab" data-bs-target="#tab-05" role="tab" aria-controls="tab-05" aria-selected="false">
+                                            <span class="icon">
+                                                <img src="{% static 'assets/img/icon/m_icon_05.png' %}" alt="">
+                                            </span>
+                                            <span class="title">COm bo</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a href="#" class="nav-link" id="nav-tab-06" data-bs-toggle="tab" data-bs-target="#tab-06" role="tab" aria-controls="tab-06" aria-selected="false">
+                                            <span class="icon">
+                                                <img src="{% static 'assets/img/icon/m_icon_06.png' %}" alt="">
+                                            </span>
+                                            <span class="title">Pizza</span>
+                                        </a>
+                                    </li>
+                                  </ul>
+                                  <div class="tab-content mt-70" id="myTabContent">
+                                    <div class="tab-pane fade" id="tab-01" role="tabpanel" aria-labelledby="nav-tab-01">
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_01.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Amaricano Fast Food</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$25.00 <span class="old">$48</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_02.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Frances Chicken Burger</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$39.00 <span class="old">$49</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_03.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Full Stack Burger</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$77.00 <span class="old">$83</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_04.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Trendy Combo Pack</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$15.00 <span class="old">$21</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_05.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Japanis Nudul 2xu New</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$64.00 <span class="old">$69</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade show active" id="tab-02" role="tabpanel" aria-labelledby="nav-tab-02">
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_01.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Amaricano Fast Food</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$25.00 <span class="old">$48</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_02.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Frances Chicken Burger</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$39.00 <span class="old">$49</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_03.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Full Stack Burger</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$77.00 <span class="old">$83</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_04.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Trendy Combo Pack</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$15.00 <span class="old">$21</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_05.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Japanis Nudul 2xu New</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$64.00 <span class="old">$69</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab-03" role="tabpanel" aria-labelledby="nav-tab-03">
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_01.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Amaricano Fast Food</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$25.00 <span class="old">$48</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_02.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Frances Chicken Burger</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$39.00 <span class="old">$49</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_03.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Full Stack Burger</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$77.00 <span class="old">$83</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_04.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Trendy Combo Pack</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$15.00 <span class="old">$21</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_05.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Japanis Nudul 2xu New</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$64.00 <span class="old">$69</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab-04" role="tabpanel" aria-labelledby="nav-tab-04">
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_01.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Amaricano Fast Food</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$25.00 <span class="old">$48</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_02.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Frances Chicken Burger</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$39.00 <span class="old">$49</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_03.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Full Stack Burger</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$77.00 <span class="old">$83</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_04.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Trendy Combo Pack</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$15.00 <span class="old">$21</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_05.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Japanis Nudul 2xu New</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$64.00 <span class="old">$69</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab-05" role="tabpanel" aria-labelledby="nav-tab-05">
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_01.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Amaricano Fast Food</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$25.00 <span class="old">$48</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_02.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Frances Chicken Burger</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$39.00 <span class="old">$49</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_03.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Full Stack Burger</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$77.00 <span class="old">$83</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_04.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Trendy Combo Pack</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$15.00 <span class="old">$21</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_05.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Japanis Nudul 2xu New</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$64.00 <span class="old">$69</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab-06" role="tabpanel" aria-labelledby="nav-tab-06">
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_01.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Amaricano Fast Food</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$25.00 <span class="old">$48</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_02.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Frances Chicken Burger</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$39.00 <span class="old">$49</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_03.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Full Stack Burger</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$77.00 <span class="old">$83</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_04.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Trendy Combo Pack</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$15.00 <span class="old">$21</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recipe_item">
+                                            <div class="ri_img">
+                                                <img src="{% static 'assets/img/shop/recipe-menu/rm_05.png' %}" alt="">
+                                            </div>
+                                            <div class="ri_content">
+                                                <div class="ri_text">
+                                                    <h3>Japanis Nudul 2xu New</h3>
+                                                    <span>Rorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incididunt ut laborey.</span>
+                                                </div>
+                                                <div class="ri_cart">
+                                                    <h5 class="price">$64.00 <span class="old">$69</span></h5>
+                                                    <a class="icon" href="#"><i class="fal fa-heart"></i></a>
+                                                    <a class="icon" href="#"><i class="fal fa-shopping-basket"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="lm_btn text-center mt-50">
+                                    <a class="thm_btn thm_btn-2" href="#">load more Product</a>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- recipe menu end -->
+
+            <!-- offer start -->
+            <section class="offer_area offer_3 section_notch offer_img_bg pt-120 pb-120" data-background="{% static 'assets/img/bg/offer_bg_02.jpg' %}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 offset-xl-6 col-lg-8 offset-lg-4">
+                            <div class="offer_content">
+                                <div class="sec_title sec_title-white">
+                                    <span>Special Kombo Pack</span>
+                                    <h2>We make the best <span>burger</span> in Your town</h2>
+                                </div>
+                                <ul class="offer_btn ul_li">
+                                    <li><a class="thm_btn thm_btn-2" href="shop-sidebar.html">order now</a></li>
+                                    <li>
+                                        <div class="offer_price">
+                                            <h4>$46.99 <span>$59.99</span></h4>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="offer_shape">
+                                <img src="{% static 'assets/img/shape/offer_shape.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- offer end -->
+
+            <!-- shop masonry start -->
+            <section class="shop_masonry_area shop_masonry_2 white_bg pt-120 pb-120">
+                <div class="container">
+                    <div class="sec_title sec_title-2">
+                        <span>Popular dishes</span>
+                        <h2>Popular dishes</h2>
+                    </div>
+                    <div class="row">
+                        <div class="masonry_active text-center mb-40">
+                            <button class="active" data-filter="*">all categories</button>
+                            <button data-filter=".cat1">Pizza</button>
+                            <button data-filter=".cat2">Burger</button>
+                            <button data-filter=".cat3">Blueberry Shake</button>
+                            <button data-filter=".cat4">Chicken Chup</button>
+                            <button data-filter=".cat5">Ice Cream</button>
+                            <button data-filter=".cat6">Drink</button>
+                        </div>
+                    </div>
+                    <div class="row grid">
+                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat1 cat4 cat5">
+                            <div class="shop_single white_bg">
+                                <div class="thumb text-center">
+                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_01.png' %}" alt=""></a>
+                                    <div class="actions">
+                                        <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
+                                        <a href="#" class="action"><i class="fal fa-heart"></i></a>
+                                        <a href="#" class="action"><i class="fal fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="s_top ul_li">
+                                        <span class="cat">Fizza</span>
+                                        <ul class="rating_star ul_li">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fal fa-star"></i></li>
+                                            <li><i class="fal fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <h3 class="title"><a href="{% url 'shop-details' %}">Unlimited Chicken fry</a></h3>
+                                    <div class="s_bottom ul_li">
+                                        <span>Price -</span>
+                                        <span class="new">$53.00</span>
+                                        <span class="old">$75.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat2 cat6">
+                            <div class="shop_single white_bg">
+                                <div class="thumb text-center">
+                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_02.png' %}" alt=""></a>
+                                    <div class="actions">
+                                        <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
+                                        <a href="#" class="action"><i class="fal fa-heart"></i></a>
+                                        <a href="#" class="action"><i class="fal fa-eye"></i></a>
+                                    </div>
+                                    <span class="badge">10%-</span>
+                                </div>
+                                <div class="content">
+                                    <div class="s_top ul_li">
+                                        <span class="cat">Chicken</span>
+                                        <ul class="rating_star ul_li">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <h3 class="title"><a href="{% url 'shop-details' %}">Bangladeshi Sendrues</a></h3>
+                                    <div class="s_bottom ul_li">
+                                        <span>Price -</span>
+                                        <span class="new">$53.00</span>
+                                        <span class="old">$75.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat4 cat3 cat1 cat2">
+                            <div class="shop_single white_bg">
+                                <div class="thumb text-center">
+                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_03.png' %}" alt=""></a>
+                                    <div class="actions">
+                                        <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
+                                        <a href="#" class="action"><i class="fal fa-heart"></i></a>
+                                        <a href="#" class="action"><i class="fal fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="s_top ul_li">
+                                        <span class="cat">Full Burgar</span>
+                                        <ul class="rating_star ul_li">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fal fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <h3 class="title"><a href="{% url 'shop-details' %}">Double Stuck Burgar</a></h3>
+                                    <div class="s_bottom ul_li">
+                                        <span>Price -</span>
+                                        <span class="new">$33.00</span>
+                                        <span class="old">$45.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat5 cat2 cat1">
+                            <div class="shop_single white_bg">
+                                <div class="thumb text-center">
+                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_04.png' %}" alt=""></a>
+                                    <div class="actions">
+                                        <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
+                                        <a href="#" class="action"><i class="fal fa-heart"></i></a>
+                                        <a href="#" class="action"><i class="fal fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="s_top ul_li">
+                                        <span class="cat">Full Burgar</span>
+                                        <ul class="rating_star ul_li">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <h3 class="title"><a href="{% url 'shop-details' %}">Chinis Popular Noudlus</a></h3>
+                                    <div class="s_bottom ul_li">
+                                        <span>Price -</span>
+                                        <span class="new">$13.00</span>
+                                        <span class="old">$17.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat4 cat2 cat6">
+                            <div class="shop_single white_bg">
+                                <div class="thumb text-center">
+                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_05.png' %}" alt=""></a>
+                                    <div class="actions">
+                                        <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
+                                        <a href="#" class="action"><i class="fal fa-heart"></i></a>
+                                        <a href="#" class="action"><i class="fal fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="s_top ul_li">
+                                        <span class="cat">Chicken</span>
+                                        <ul class="rating_star ul_li">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fal fa-star"></i></li>
+                                            <li><i class="fal fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <h3 class="title"><a href="{% url 'shop-details' %}">Unlimited Full Chicken</a></h3>
+                                    <div class="s_bottom ul_li">
+                                        <span>Price -</span>
+                                        <span class="new">$66.00</span>
+                                        <span class="old">$77.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat5 cat4 cat3 cat6">
+                            <div class="shop_single white_bg">
+                                <div class="thumb text-center">
+                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_06.png' %}" alt=""></a>
+                                    <div class="actions">
+                                        <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
+                                        <a href="#" class="action"><i class="fal fa-heart"></i></a>
+                                        <a href="#" class="action"><i class="fal fa-eye"></i></a>
+                                    </div>
+                                    <span class="badge">New</span>
+                                </div>
+                                <div class="content">
+                                    <div class="s_top ul_li">
+                                        <span class="cat">Full Burgar</span>
+                                        <ul class="rating_star ul_li">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fal fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <h3 class="title"><a href="{% url 'shop-details' %}">Bangladeshi Sendrues</a></h3>
+                                    <div class="s_bottom ul_li">
+                                        <span>Price -</span>
+                                        <span class="new">$53.00</span>
+                                        <span class="old">$75.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="ca_btn text-center pt-20">
+                                <a class="thm_btn thm_btn-2" href="shop.html">Sell All Product</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- shop masonry end -->
+
+            <!-- testimonial start -->
+            <section class="testimonial_area testimonial_2 section_notch" data-background="{% static 'assets/img/bg/reservation_bg.jpg' %}">
+                <div class="container-fluid p-0">
+                    <div class="row flex-row-reverse">
+                        <div class="col-lg-6">
+                            <div class="reservation_img pos-rel">
+                                <img src="{% static 'assets/img/bg/testimonial_bg.jpg' %}" alt="">
+                                <a class="popup-video video_icon" href="https://www.youtube.com/watch?v=cRXm1p-CNyk"><i class="fal fa-play"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="testimonial_content_wrap text-center">
+                                <div class="sec_title sec_title-white">
+                                    <span>Testimonial</span>
+                                    <h2>Our Customer Say</h2>
+                                </div>
+                                <div class="testimonial_active-3 owl-carousel">
+                                    <div class="tm_item">
+                                        <div class="tm_icon">
+                                            <img src="{% static 'assets/img/icon/tm_q_02.png' %}" alt="">
+                                        </div>
+                                        <p>Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repree rahye.</p>
+                                        <div class="author_info">
+                                            <div class="author">
+                                                <img src="{% static 'assets/img/testimonial/tm_author.png' %}" alt="">
+                                            </div>
+                                            <h4>Rasalina De Willamson</h4>
+                                            <span>Founder & co</span>
+                                        </div>
+                                    </div>
+                                    <div class="tm_item">
+                                        <div class="tm_icon">
+                                            <img src="{% static 'assets/img/icon/tm_q_02.png' %}" alt="">
+                                        </div>
+                                        <p>Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repree rahye.</p>
+                                        <div class="author_info">
+                                            <div class="author">
+                                                <img src="{% static 'assets/img/testimonial/tm_author.png' %}" alt="">
+                                            </div>
+                                            <h4>Rasalina De Willamson</h4>
+                                            <span>Founder & co</span>
+                                        </div>
+                                    </div>
+                                    <div class="tm_item">
+                                        <div class="tm_icon">
+                                            <img src="{% static 'assets/img/icon/tm_q_02.png' %}" alt="">
+                                        </div>
+                                        <p>Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repree rahye.</p>
+                                        <div class="author_info">
+                                            <div class="author">
+                                                <img src="{% static 'assets/img/testimonial/tm_author.png' %}" alt="">
+                                            </div>
+                                            <h4>Rasalina De Willamson</h4>
+                                            <span>Founder & co</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- testimonial end -->
+
+            <!-- blog start -->
+            <section class="blog_area blog_2 pt-120 pb-120 white_bg">
+                <div class="container">
+                    <div class="sec_title sec_title-2">
+                        <span>News & Blog</span>
+                        <h2>Latest News & Blog</h2>
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="blog_single mb-30">
+                                <div class="blog_thumb">
+                                    <a href="blog-details.html">
+                                        <img src="{% static 'assets/img/blog/blog_01.jpg' %}" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog_content">
+                                    <span class="tag"><a href="#">Business</a></span>
+                                    <h3><a href="blog-details.html">Best Burger In Your Soci...</a></h3>
+                                    <p>Rorem ipsum dolor sit amet, consect dipisicing elit, sed do eiusmod temporey. </p>
+                                    <ul class="blog_meta pt-10 ul_li">
+                                        <li>By <a href="#">Admin</a></li>
+                                        <li class="cmt"><a href="#">24 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="blog_single mb-30">
+                                <div class="blog_thumb">
+                                    <a href="blog-details.html">
+                                        <img src="{% static 'assets/img/blog/blog_02.jpg' %}" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog_content">
+                                    <span class="tag"><a href="#">Chicken</a></span>
+                                    <h3><a href="blog-details.html">12 speedy seafood recipes..</a></h3>
+                                    <p>Rorem ipsum dolor sit amet, consect dipisicing elit, sed do eiusmod temporey. </p>
+                                    <ul class="blog_meta pt-10 ul_li">
+                                        <li>By <a href="#">Admin</a></li>
+                                        <li class="cmt"><a href="#">33 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="blog_single mb-30">
+                                <div class="blog_thumb">
+                                    <a href="blog-details.html">
+                                        <img src="{% static 'assets/img/blog/blog_03.jpg' %}" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog_content">
+                                    <span class="tag"><a href="#">Burgerey</a></span>
+                                    <h3><a href="blog-details.html">Who’s winning the fast...</a></h3>
+                                    <p>Rorem ipsum dolor sit amet, consect dipisicing elit, sed do eiusmod temporey. </p>
+                                    <ul class="blog_meta pt-10 ul_li">
+                                        <li>By <a href="#">Admin</a></li>
+                                        <li class="cmt"><a href="#">37 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="ca_btn text-center pt-20">
+                                <a class="thm_btn thm_btn-2" href="blog.html">Sell All Blog</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- blog end -->
+        </main>
+        <!-- main body end -->
+{% endblock body %}

@@ -1,0 +1,382 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+        <main>
+            <!-- page title start -->
+            <section class="page_title_area" data-background="{% static 'assets/img/bg/page_title.jpg'%}">
+                <div class="container">
+                   <div class="row">
+                       <div class="col-lg-8">
+                            <div class="page_title">
+                                <h1>Recent Blog</h1>
+                                <ul class="breadcrumb_nav ul_li">
+                                    <li><a href="{% url 'home' %}">Home</a></li>
+                                    <li>Recent Blog</li>
+                                </ul>
+                            </div>
+                       </div>
+                       <div class="col-lg-4">
+                           <div class="page_title_img">
+                               <img src="{% static 'assets/img/bg/page_title_img.png' %}" alt="">
+                           </div>
+                       </div>
+                   </div>
+                </div>
+                <div class="breadcrumb_icon_wrap">
+                    <div class="container">
+                        <div class="breadcrumb_icon">
+                            <img src="{% static 'assets/img/icon/bc_icon.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- page title end -->
+
+            <!-- blog start -->
+            <section class="blog_area pt-120 pb-70">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="blog_wrap mb-50">
+                                <article class="post_item format_standard">
+                                    <a class="post_thumb" href="{% url 'blog-details' %}"><img src="{% static 'assets/img/blog/feed/img_01.jpg'%}" alt=""></a>
+                                    <div class="post_content">
+                                        <ul class="post_meta ul_li">
+                                            <li><i class="fal fa-eye"></i> 100 Views</li>
+                                            <li><a href="#"><i class="fal fa-comments"></i> Commnets (05)</a></li>
+                                            <li><i class="fal fa-calendar-alt"></i> 25 Nov 2021</li>
+                                        </ul>
+                                        <h3 class="title"><a href="{% url 'blog-details' %}">Outdoor Work: a Designer’s Checklist for Every ui/ux Project.</a></h3>
+                                        <p>Rerem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. </p>
+                                        <ul class="post_btn mt-20 ul_li">
+                                            <li>
+                                              <a class="thm_btn" href="{% url 'blog-details' %}">Read more</a>
+                                            </li>
+                                            <li>
+                                              <div class="author_wrap">
+                                                <div class="author">
+                                                  <img src="{% static 'assets/img/blog/feed/author.png' %}" alt="image_not_found">
+                                                </div>
+                                                <h5 class="author_name">Wasim Mia</h5>
+                                              </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </article>
+                                <article class="post_item format_gallery">
+                                    <div class="gallery_post_active owl-carousel">
+                                        <div class="post_thumb">
+                                            <img src="{% static 'assets/img/blog/feed/img_02.jpg'%}" alt="image_not_found">
+                                        </div>
+                                        <div class="post_thumb">
+                                            <img src="{% static 'assets/img/blog/feed/img_03.jpg'%}" alt="image_not_found">
+                                        </div>
+                                        <div class="post_thumb">
+                                            <img src="{% static 'assets/img/blog/feed/img_01.jpg'%}" alt="image_not_found">
+                                        </div>
+                                    </div>
+                                    <div class="post_content">
+                                        <ul class="post_meta ul_li">
+                                            <li><i class="fal fa-eye"></i> 100 Views</li>
+                                            <li><a href="#"><i class="fal fa-comments"></i> Commnets (05)</a></li>
+                                            <li><i class="fal fa-calendar-alt"></i> 25 Nov 2021</li>
+                                        </ul>
+                                        <h3 class="title"><a href="{% url 'blog-details' %}">Labor Depar rules pro as tweaks overtime & Enjoy Burger</a></h3>
+                                        <p>Rerem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. </p>
+                                        <ul class="post_btn mt-20 ul_li">
+                                            <li>
+                                                <a class="thm_btn" href="{% url 'blog-details' %}">Read more</a>
+                                            </li>
+                                            <li>
+                                              <div class="author_wrap">
+                                                <div class="author">
+                                                  <img src="{% static 'assets/img/blog/feed/author.png' %}" alt="image_not_found">
+                                                </div>
+                                                <h5 class="author_name">Wasim Mia</h5>
+                                              </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </article>
+                                <article class="post_item format_video">
+                                    <div class="post_thumb">
+                                        <img src="{% static 'assets/img/blog/feed/img_03.jpg'%}" alt="">
+                                        <a class="popup-video video_icon" href="https://www.youtube.com/watch?v=cRXm1p-CNyk"><i class="fal fa-play"></i></a>
+                                    </div>
+                                    <div class="post_content">
+                                        <ul class="post_meta ul_li">
+                                            <li><i class="fal fa-eye"></i> 100 Views</li>
+                                            <li><a href="#"><i class="fal fa-comments"></i> Commnets (05)</a></li>
+                                            <li><i class="fal fa-calendar-alt"></i> 25 Nov 2021</li>
+                                        </ul>
+                                        <h3 class="title"><a href="{% url 'blog-details' %}">Outdoor Work: a Designer’s Checklist for Every ui/ux Project.</a></h3>
+                                        <p>Rerem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. </p>
+                                        <ul class="post_btn mt-20 ul_li">
+                                            <li>
+                                                <a class="thm_btn" href="{% url 'blog-details' %}">Read more</a>
+                                            </li>
+                                            <li>
+                                              <div class="author_wrap">
+                                                <div class="author">
+                                                  <img src="{% static 'assets/img/blog/feed/author.png' %}" alt="image_not_found">
+                                                </div>
+                                                <h5 class="author_name">Wasim Mia</h5>
+                                              </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </article>
+                                <article class="post_item format_quote">
+                                    <div class="post_content">
+                                        <h3 class="title"><a href="{% url 'blog-details' %}">Labor Depar rules pro as tweaks overtime & Enjoy Burger</a></h3>
+                                    </div>
+                                </article>
+                                <article class="post_item format_no_thumb">
+                                    <div class="post_content">
+                                        <ul class="post_meta ul_li">
+                                            <li><i class="fal fa-eye"></i> 100 Views</li>
+                                            <li><a href="#"><i class="fal fa-comments"></i> Commnets (05)</a></li>
+                                            <li><i class="fal fa-calendar-alt"></i> 25 Nov 2021</li>
+                                        </ul>
+                                        <h3 class="title"><a href="{% url 'blog-details' %}">New restaurant town that Looking think..</a></h3>
+                                        <p>Rerem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. </p>
+                                        <ul class="post_btn mt-20 ul_li">
+                                            <li>
+                                                <a class="thm_btn" href="{% url 'blog-details' %}">Read more</a>
+                                            </li>
+                                            <li>
+                                              <div class="author_wrap">
+                                                <div class="author">
+                                                  <img src="{% static 'assets/img/blog/feed/author.png' %}" alt="image_not_found">
+                                                </div>
+                                                <h5 class="author_name">Wasim Mia</h5>
+                                              </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </article>
+                                <article class="post_item format_audio">
+                                    <div class="post_thumb">
+                                        <img src="{% static 'assets/img/blog/feed/sound_bg.jpg'%}" alt="">
+                                    </div>
+                                    <div class="post_content">
+                                        <ul class="post_meta ul_li">
+                                            <li><i class="fal fa-eye"></i> 100 Views</li>
+                                            <li><a href="#"><i class="fal fa-comments"></i> Commnets (05)</a></li>
+                                            <li><i class="fal fa-calendar-alt"></i> 25 Nov 2021</li>
+                                        </ul>
+                                        <h3 class="title"><a href="{% url 'blog-details' %}">Outdoor Work: a Designer’s Checklist for Every ui/ux Project.</a></h3>
+                                        <p>Rerem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. </p>
+                                        <ul class="post_btn mt-20 ul_li">
+                                            <li>
+                                                <a class="thm_btn" href="{% url 'blog-details' %}">Read more</a>
+                                            </li>
+                                            <li>
+                                              <div class="author_wrap">
+                                                <div class="author">
+                                                  <img src="{% static 'assets/img/blog/feed/author.png' %}" alt="image_not_found">
+                                                </div>
+                                                <h5 class="author_name">Wasim Mia</h5>
+                                              </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </article>
+                                <div class="pagination_wrap pt-30">
+                                    <ul>
+                                        <li><a href="#"><i class="fal fa-angle-double-left"></i></a></li>
+                                        <li><a href="#" class="current_page">01</a></li>
+                                        <li><a href="#">02</a></li>
+                                        <li><a href="#"><i class="fal fa-ellipsis-h"></i></a></li>
+                                        <li><a href="#">08</a></li>
+                                        <li><a href="#"><i class="fal fa-angle-double-right"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="widget_wrap mb-50">
+                                <div class="widget">
+                                    <h3 class="widget_title">Search Here</h3>
+                                    <form class="search_widget" action="#">
+                                        <input type="text" placeholder="Search">
+                                        <button type="button"><i class="fal fa-search"></i></button>
+                                    </form>
+                                </div>
+                                <div class="widget">
+                                    <h3 class="widget_title">Categories</h3>
+                                    <ul class="widget_category">
+                                        <li>
+                                            <a href="#">
+                                                <div class="wc_left ul_li">
+                                                    <img class="icon" src="{% static 'assets/img/icon/wc_01.png' %}" alt="">
+                                                    <span>Burger</span>
+                                                </div>
+                                                <span class="number">04</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="wc_left ul_li">
+                                                    <img class="icon" src="{% static 'assets/img/icon/wc_02.png' %}" alt="">
+                                                    <span>2x Pizza</span>
+                                                </div>
+                                                <span class="number">08</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="wc_left ul_li">
+                                                    <img class="icon" src="{% static 'assets/img/icon/wc_03.png' %}" alt="">
+                                                    <span>Cold Drinks</span>
+                                                </div>
+                                                <span class="number">12</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="wc_left ul_li">
+                                                    <img class="icon" src="{% static 'assets/img/icon/wc_04.png' %}" alt="">
+                                                    <span>Chicken</span>
+                                                </div>
+                                                <span class="number">15</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="wc_left ul_li">
+                                                    <img class="icon" src="{% static 'assets/img/icon/wc_05.png' %}" alt="">
+                                                    <span>Stuck Dish</span>
+                                                </div>
+                                                <span class="number">22</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="widget">
+                                    <h3 class="widget_title">Recent Posts</h3>
+                                    <ul class="widget_post">
+                                        <li>
+                                            <div class="post_thumb">
+                                                <a href="{% url 'blog-details' %}"><img src="{% static 'assets/img/blog/feed/wpost_01.jpg'%}" alt=""></a>
+                                            </div>
+                                            <div class="content">
+                                                <h6><a href="{% url 'blog-details' %}">Best Smell of Americano Coffee Trins</a></h6>
+                                                <span class="date"><i class="fal fa-calendar-alt"></i> 19th Fabruary
+                                                    2021</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="post_thumb">
+                                                <a href="{% url 'blog-details' %}"><img src="{% static 'assets/img/blog/feed/wpost_02.jpg'%}" alt=""></a>
+                                            </div>
+                                            <div class="content">
+                                                <h6><a href="{% url 'blog-details' %}">10 Reasons To Do A Digital Detox Challenge</a></h6>
+                                                <span class="date"><i class="fal fa-calendar-alt"></i> 19th Fabruary 2021</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="post_thumb">
+                                                <a href="{% url 'blog-details' %}"><img src="{% static 'assets/img/blog/feed/wpost_03.jpg'%}" alt=""></a>
+                                            </div>
+                                            <div class="content">
+                                                <h6><a href="{% url 'blog-details' %}">Best Smell of Americano Coffee Trins</a></h6>
+                                                <span class="date"><i class="fal fa-calendar-alt"></i> 19th Fabruary 2021</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="post_thumb">
+                                                <a href="{% url 'blog-details' %}"><img src="{% static 'assets/img/blog/feed/wpost_04.jpg'%}" alt=""></a>
+                                            </div>
+                                            <div class="content">
+                                                <h6><a href="{% url 'blog-details' %}">10 Reasons To Do A Digital Detox Challenge</a></h6>
+                                                <span class="date"><i class="fal fa-calendar-alt"></i> 19th Fabruary 2021</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="widget">
+                                    <h3 class="widget_title">Popular Tag</h3>
+                                    <ul class="post_tags">
+                                        <li><a href="#">Popular</a></li>
+                                        <li><a href="#">Design</a></li>
+                                        <li><a href="#">UI</a></li>
+                                        <li><a href="#">Usability</a></li>
+                                        <li><a href="#">Develop</a></li>
+                                        <li><a href="#">Icon</a></li>
+                                        <li><a href="#">Business</a></li>
+                                        <li><a href="#">Consult</a></li>
+                                        <li><a href="#">Kit</a></li>
+                                        <li><a href="#">Keyboard</a></li>
+                                        <li><a href="#">Mouse</a></li>
+                                        <li><a href="#">Tech</a></li>
+                                    </ul>
+                                </div>
+                                <div class="widget">
+                                    <a class="adds_img" href="#">
+                                        <img src="{% static 'assets/img/blog/feed/adds_img.jpg'%}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- blog end -->
+
+            <!-- brand start -->
+            <section class="brand_area white_bg">
+                <div class="container-fluid">
+                    <div class="row g-0 justify-content-center">
+                        <div class="col-lg-2 col-md-3 col-sm-6 b_border">
+                            <div class="brand_img">
+                                <img src="{% static 'assets/img/brand/brand_01.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 b_border">
+                            <div class="brand_img">
+                                <img src="{% static 'assets/img/brand/brand_02.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 b_border">
+                            <div class="brand_img">
+                                <img src="{% static 'assets/img/brand/brand_03.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 b_border">
+                            <div class="brand_img">
+                                <img src="{% static 'assets/img/brand/brand_04.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 b_border">
+                            <div class="brand_img">
+                                <img src="{% static 'assets/img/brand/brand_05.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 b_border">
+                            <div class="brand_img">
+                                <img src="{% static 'assets/img/brand/brand_06.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- brand end -->
+        </main>
+{% endblock body %}

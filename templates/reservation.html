@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+        <!-- main body end -->
+        <main>
+
+            <!-- page title start -->
+            <section class="page_title_area" data-background="{% static 'assets/img/bg/page_title.jpg' %}">
+                <div class="container">
+                   <div class="row">
+                       <div class="col-lg-8">
+                            <div class="page_title">
+                                <h1>Reservation Form</h1>
+                                <ul class="breadcrumb_nav ul_li">
+                                    <li><a href="{% url 'home' %}">Home</a></li>
+                                    <li>Reservation Form</li>
+                                </ul>
+                            </div>
+                       </div>
+                       <div class="col-lg-4">
+                           <div class="page_title_img">
+                               <img src="{% static 'assets/img/bg/page_title_img.png' %}" alt="">
+                           </div>
+                       </div>
+                   </div>
+                </div>
+                <div class="breadcrumb_icon_wrap">
+                    <div class="container">
+                        <div class="breadcrumb_icon">
+                            <img src="{% static 'assets/img/icon/bc_icon.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- page title end -->
+
+            <!-- reservation start -->
+            <section class="reservation_area pt-120 pb-120">
+                <div class="container">
+                    <div class="reserve_table_form">
+                        <h2 class="from_title">reserve your table</h2> 
+                        <form action="#">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6">
+                                    <div class="form_item">
+                                        <input type="text" placeholder="Enter Your Name">
+                                        <i class="fal fa-user"></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form_item">
+                                        <input type="text" placeholder="Enter Your Number">
+                                        <i class="fal fa-phone"></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="filter">
+                                        <select name="select" id="dselect">
+                                            <option value="1">1 Person</option>
+                                            <option value="2">2 Persons</option>
+                                            <option value="3">3 Persons</option>
+                                            <option value="4">4 Persons</option>
+                                            <option value="5">5+ Persons</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form_item">
+                                        <input type="text" id="date" placeholder="Mm/Dd/Yy">
+                                        <i class="fal fa-calendar-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form_item">
+                                        <input type="text" id="time" placeholder="Time">
+                                        <i class="fal fa-clock"></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form_item">
+                                        <input type="email" placeholder="Enter Your Email">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="thm_btn">Submit your request</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!-- reservation end -->
+
+            <!-- brand start -->
+            <section class="brand_area white_bg">
+                <div class="container-fluid">
+                    <div class="row g-0 justify-content-center">
+                        <div class="col-lg-2 col-md-3 col-sm-6 b_border">
+                            <div class="brand_img">
+                                <img src="{% static 'assets/img/brand/brand_01.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 b_border">
+                            <div class="brand_img">
+                                <img src="{% static 'assets/img/brand/brand_02.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 b_border">
+                            <div class="brand_img">
+                                <img src="{% static 'assets/img/brand/brand_03.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 b_border">
+                            <div class="brand_img">
+                                <img src="{% static 'assets/img/brand/brand_04.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 b_border">
+                            <div class="brand_img">
+                                <img src="{% static 'assets/img/brand/brand_05.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 b_border">
+                            <div class="brand_img">
+                                <img src="{% static 'assets/img/brand/brand_06.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- brand end -->
+        </main>
+        <!-- main body end -->
+        {% endblock body %}

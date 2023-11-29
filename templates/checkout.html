@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+        <main>
+
+            <!-- page title start -->
+            <section class="page_title_area" data-background="{% static 'assets/img/bg/page_title.jpg' %}">
+                <div class="container">
+                   <div class="row">
+                       <div class="col-lg-8">
+                            <div class="page_title">
+                                <h1>Checkout</h1>
+                                <ul class="breadcrumb_nav ul_li">
+                                    <li><a href="index-2.html">Home</a></li>
+                                    <li>Checkout</li>
+                                </ul>
+                            </div>
+                       </div>
+                       <div class="col-lg-4">
+                           <div class="page_title_img">
+                               <img src="{% static 'assets/img/bg/page_title_img.png'%}" alt="">
+                           </div>
+                       </div>
+                   </div>
+                </div>
+                <div class="breadcrumb_icon_wrap">
+                    <div class="container">
+                        <div class="breadcrumb_icon">
+                            <img src="{% static 'assets/img/icon/bc_icon.png'%}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- page title end -->
+
+            <!-- checkout start -->
+            <section class="checkout_area pt-120 pb-120">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="checkout_wrap">
+                                <div class="radio_wrap">
+                                    <h3>Payment Method</h3>
+                                    <ul>
+                                        <li>
+                                            <input type="radio" name="payment-mode" id="manual-232-1" value="manual" checked="checked">
+                                            <label for="manual-232-1" id="option-manual"> New Payment Card</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="payment-mode" id="paypal-232-1" value="paypal">
+
+                                            <label for="paypal-232-1" id="option-paypal"> Paypal</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="payment-mode" id="cash-232-1" value="cash">
+
+                                            <label for="cash-232-1" id="option-cash"> Cash on Delivery</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-9 col-lg-12">
+                                        <form class="form_wrap" action="#">
+                                            <div class="row">
+                                                <div class="col-xl-6 col-lg-6">
+                                                    <label for="fname">First Name<span>*</span></label>
+                                                    <input type="text" id="fname" name="fname" placeholder="First Name">
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6">
+                                                    <label for="lname">Last Name<span>*</span></label>
+                                                    <input type="text" id="lname" name="lname" placeholder="Last Name">
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12">
+                                                    <label for="cname">Company name<span>(optional)</span></label>
+                                                    <input type="text" id="cname" name="cname" placeholder="Company name..">
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12">
+                                                    <label for="country">Country / Region<span>*</span></label>
+                                                    <div class="filter">
+                                                        <select name="select" id="country">
+                                                            <option value="1">Bangladesh</option>
+                                                            <option value="2">Saudi Arabia</option>
+                                                            <option value="3">United Arab Emirates</option>
+                                                            <option value="4">United Kingdom</option>
+                                                            <option value="5">Pakistan</option>
+                                                            <option value="6">South Africa</option>
+                                                            <option value="7">Morocco</option>
+                                                            <option value="8">New Zealand</option>
+                                                            <option value="9">Netherlands</option>
+                                                            <option value="10">Japan</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12">
+                                                    <label for="address">Street address<span>*</span></label>
+                                                    <input type="text" id="address" name="address" placeholder="House number & State">
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12">
+                                                    <label for="ct">Town / City<span>*</span></label>
+                                                    <input type="text" id="ct" name="ct" placeholder="Town / City">
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12">
+                                                    <label for="dselect">District<span>*</span></label>
+                                                    <div class="filter">
+                                                        <select name="select" id="dselect">
+                                                            <option value="1">Dhaka</option>
+                                                            <option value="2">Faridpur</option>
+                                                            <option value="3">Cumilla</option>
+                                                            <option value="4">Noakhali</option>
+                                                            <option value="5">Rangamati</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12">
+                                                    <label for="postcode">Postcode / ZIP<span>(optional)</span></label>
+                                                    <input type="text" id="postcode" name="postcode" placeholder="Postcode/ZIP">
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6">
+                                                    <label for="phone">Phone<span>*</span></label>
+                                                    <input type="text" id="phone" name="postcode" placeholder="Enter your number...">
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6">
+                                                    <label for="gmail">Gmail<span>*</span></label>
+                                                    <input type="text" id="gmail" name="postcode" placeholder="Enter your mail...">
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12">
+                                                    <label for="textarea">Additional Information<span>*</span></label>
+                                                    <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Note about your order, Special note for delevery !"></textarea>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-6 col-12">
+                                            <div class="cart_tutal_wrap">
+                                                <h3 class="title">Cart Totals</h3>
+                                                <ul>
+                                                    <li>Subtotal <span>$70</span></li>
+                                                    <li>total <span>$70</span></li>
+                                                </ul>
+                                                <div class="text-right">
+                                                    <a class="thm_btn thm_btn-black" href="checkout.html">Procced To Checkout</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- checkout end -->
+
+            <!-- brand start -->
+            <section class="brand_area white_bg">
+                <div class="container-fluid">
+                    <div class="row g-0 justify-content-center">
+                        <div class="col-lg-2 col-md-3 col-sm-6 b_border">
+                            <div class="brand_img">
+                                <img src="{% static 'assets/img/brand/brand_01.png'%}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 b_border">
+                            <div class="brand_img">
+                                <img src="{% static 'assets/img/brand/brand_02.png'%}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 b_border">
+                            <div class="brand_img">
+                                <img src="{% static 'assets/img/brand/brand_03.png'%}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 b_border">
+                            <div class="brand_img">
+                                <img src="{% static 'assets/img/brand/brand_04.png'%}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 b_border">
+                            <div class="brand_img">
+                                <img src="{% static 'assets/img/brand/brand_05.png'%}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 b_border">
+                            <div class="brand_img">
+                                <img src="{% static 'assets/img/brand/brand_06.png'%}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- brand end -->
+        </main>
+{% endblock body %}
