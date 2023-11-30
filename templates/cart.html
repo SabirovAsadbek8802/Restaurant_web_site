@@ -1,24 +1,25 @@
 {% extends "base.html" %}
 {% load static %}
+{% block body %}
         <!-- main body end -->
         <main>
 
             <!-- page title start -->
-            <section class="page_title_area" data-background="assets/img/bg/page_title.jpg">
+            <section class="page_title_area" data-background="{% static 'assets/img/bg/page_title.jpg'%}">
                 <div class="container">
                    <div class="row">
                        <div class="col-lg-8">
                             <div class="page_title">
                                 <h1>Shopping Cart</h1>
                                 <ul class="breadcrumb_nav ul_li">
-                                    <li><a href="index-2.html">Home</a></li>
+                                    <li><a href="{% url 'home' %}">Home</a></li>
                                     <li>Shopping Cart</li>
                                 </ul>
                             </div>
                        </div>
                        <div class="col-lg-4">
                            <div class="page_title_img">
-                               <img src="assets/img/bg/page_title_img.png" alt="">
+                               <img src="{% static 'assets/img/bg/page_title_img.png' %}" alt="">
                            </div>
                        </div>
                    </div>
@@ -26,7 +27,7 @@
                 <div class="breadcrumb_icon_wrap">
                     <div class="container">
                         <div class="breadcrumb_icon">
-                            <img src="assets/img/icon/bc_icon.png" alt="">
+                            <img src="{% static 'assets/img/icon/bc_icon.png' %}" alt="">
                         </div>
                     </div>
                 </div>
@@ -53,7 +54,7 @@
                                             <td>
                                                 <div class="carttable_product_item">
                                                     <div class="item_image">
-                                                        <img src="assets/img/shop/cart/img_01.jpg" alt="image_not_found">
+                                                        <img src="{% static 'assets/img/shop/cart/img_01.jpg'%}" alt="image_not_found">
                                                     </div>
                                                     <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
                                                     <h3 class="item_title">Americano Top Burger</h3>
@@ -73,7 +74,7 @@
                                             <td>
                                                 <div class="carttable_product_item">
                                                     <div class="item_image">
-                                                        <img src="assets/img/shop/cart/img_02.jpg" alt="image_not_found">
+                                                        <img src="{% static 'assets/img/shop/cart/img_02.jpg'%}" alt="image_not_found">
                                                     </div>
                                                     <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
                                                     <h3 class="item_title">Americano Top Burger</h3>
@@ -93,7 +94,7 @@
                                             <td>
                                                 <div class="carttable_product_item">
                                                     <div class="item_image">
-                                                        <img src="assets/img/shop/cart/img_03.jpg" alt="image_not_found">
+                                                        <img src="{% static 'assets/img/shop/cart/img_03.jpg'%}" alt="image_not_found">
                                                     </div>
                                                     <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
                                                     <h3 class="item_title">Americano Top Burger</h3>
@@ -113,7 +114,7 @@
                                             <td>
                                                 <div class="carttable_product_item">
                                                     <div class="item_image">
-                                                        <img src="assets/img/shop/cart/img_04.jpg" alt="image_not_found">
+                                                        <img src="{% static 'assets/img/shop/cart/img_04.jpg'%}" alt="image_not_found">
                                                     </div>
                                                     <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
                                                     <h3 class="item_title">Americano Top Burger</h3>
@@ -133,7 +134,7 @@
                                             <td>
                                                 <div class="carttable_product_item">
                                                     <div class="item_image">
-                                                        <img src="assets/img/shop/cart/img_05.jpg" alt="image_not_found">
+                                                        <img src="{% static 'assets/img/shop/cart/img_05.jpg'%}" alt="image_not_found">
                                                     </div>
                                                     <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
                                                     <h3 class="item_title">Americano Top Burger</h3>
@@ -172,7 +173,7 @@
                                     <li>Subtotal <span>$70</span></li>
                                     <li>Total <span>$70</span></li>
                                 </ul>
-                                <a class="thm_btn thm_btn-black" href="checkout.html">Procced to checkout</a>
+                                <a class="thm_btn thm_btn-black" href="{% url 'checkout' %}">Procced to checkout</a>
                             </div>
                         </div>
                     </div>
@@ -186,32 +187,32 @@
                     <div class="row g-0 justify-content-center">
                         <div class="col-lg-2 col-md-3 col-sm-6 b_border">
                             <div class="brand_img">
-                                <img src="assets/img/brand/brand_01.png" alt="">
+                                <img src="{% static 'assets/img/brand/brand_01.png' %}" alt="">
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-3 col-sm-6 b_border">
                             <div class="brand_img">
-                                <img src="assets/img/brand/brand_02.png" alt="">
+                                <img src="{% static 'assets/img/brand/brand_02.png' %}" alt="">
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-3 col-sm-6 b_border">
                             <div class="brand_img">
-                                <img src="assets/img/brand/brand_03.png" alt="">
+                                <img src="{% static 'assets/img/brand/brand_03.png' %}" alt="">
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-3 col-sm-6 b_border">
                             <div class="brand_img">
-                                <img src="assets/img/brand/brand_04.png" alt="">
+                                <img src="{% static 'assets/img/brand/brand_04.png' %}" alt="">
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-3 col-sm-6 b_border">
                             <div class="brand_img">
-                                <img src="assets/img/brand/brand_05.png" alt="">
+                                <img src="{% static 'assets/img/brand/brand_05.png' %}" alt="">
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-3 col-sm-6 b_border">
                             <div class="brand_img">
-                                <img src="assets/img/brand/brand_06.png" alt="">
+                                <img src="{% static 'assets/img/brand/brand_06.png' %}" alt="">
                             </div>
                         </div>
                     </div>
@@ -220,3 +221,4 @@
             <!-- brand end -->
         </main>
         <!-- main body end -->
+{% endblock %}

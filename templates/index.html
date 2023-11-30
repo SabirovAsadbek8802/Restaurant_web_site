@@ -650,7 +650,7 @@
                                     <h2>We make the best <span>burger</span> in Your town</h2>
                                 </div>
                                 <ul class="offer_btn ul_li">
-                                    <li><a class="thm_btn thm_btn-2" href="shop-sidebar.html">order now</a></li>
+                                    <li><a class="thm_btn thm_btn-2" href="{% url 'shop-sidebar' %}">order now</a></li>
                                     <li>
                                         <div class="offer_price">
                                             <h4>$46.99 <span>$59.99</span></h4>
@@ -872,7 +872,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="ca_btn text-center pt-20">
-                                <a class="thm_btn thm_btn-2" href="shop.html">Sell All Product</a>
+                                <a class="thm_btn thm_btn-2" href="{% url 'shop' %}">Sell All Product</a>
                             </div>
                         </div>
                     </div>
@@ -955,13 +955,13 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="blog_single mb-30">
                                 <div class="blog_thumb">
-                                    <a href="blog-details.html">
+                                    <a href="{% url 'blog-details' %}">
                                         <img src="{% static 'assets/img/blog/blog_01.jpg' %}" alt="">
                                     </a>
                                 </div>
                                 <div class="blog_content">
                                     <span class="tag"><a href="#">Business</a></span>
-                                    <h3><a href="blog-details.html">Best Burger In Your Soci...</a></h3>
+                                    <h3><a href="{% url 'blog-details' %}">Best Burger In Your Soci...</a></h3>
                                     <p>Rorem ipsum dolor sit amet, consect dipisicing elit, sed do eiusmod temporey. </p>
                                     <ul class="blog_meta pt-10 ul_li">
                                         <li>By <a href="#">Admin</a></li>
@@ -973,13 +973,13 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="blog_single mb-30">
                                 <div class="blog_thumb">
-                                    <a href="blog-details.html">
+                                    <a href="{% url 'blog-details' %}">
                                         <img src="{% static 'assets/img/blog/blog_02.jpg' %}" alt="">
                                     </a>
                                 </div>
                                 <div class="blog_content">
                                     <span class="tag"><a href="#">Chicken</a></span>
-                                    <h3><a href="blog-details.html">12 speedy seafood recipes..</a></h3>
+                                    <h3><a href="{% url 'blog-details' %}">12 speedy seafood recipes..</a></h3>
                                     <p>Rorem ipsum dolor sit amet, consect dipisicing elit, sed do eiusmod temporey. </p>
                                     <ul class="blog_meta pt-10 ul_li">
                                         <li>By <a href="#">Admin</a></li>
@@ -991,13 +991,13 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="blog_single mb-30">
                                 <div class="blog_thumb">
-                                    <a href="blog-details.html">
+                                    <a href="{% url 'blog-details' %}">
                                         <img src="{% static 'assets/img/blog/blog_03.jpg' %}" alt="">
                                     </a>
                                 </div>
                                 <div class="blog_content">
                                     <span class="tag"><a href="#">Burgerey</a></span>
-                                    <h3><a href="blog-details.html">Who’s winning the fast...</a></h3>
+                                    <h3><a href="{% url 'blog-details' %}">Who’s winning the fast...</a></h3>
                                     <p>Rorem ipsum dolor sit amet, consect dipisicing elit, sed do eiusmod temporey. </p>
                                     <ul class="blog_meta pt-10 ul_li">
                                         <li>By <a href="#">Admin</a></li>
@@ -1010,7 +1010,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="ca_btn text-center pt-20">
-                                <a class="thm_btn thm_btn-2" href="blog.html">Sell All Blog</a>
+                                <a class="thm_btn thm_btn-2" href="{% url 'blog' %}">Sell All Blog</a>
                             </div>
                         </div>
                     </div>

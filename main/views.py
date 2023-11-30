@@ -8,9 +8,10 @@ def index(request):
 def about(request):
     return render(request, "about.html")
 
-
 def blog(request):
     return render(request, "blog.html")
+def cart(request):
+    return render(request, "cart.html")
 
 
 def blog_details(request):
