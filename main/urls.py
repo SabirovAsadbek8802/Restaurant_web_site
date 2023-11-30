@@ -17,5 +17,8 @@ urlpatterns = [
     path("shop-sidebar/", shop_sidebar, name='shop-sidebar'),
     path("shop/", shop, name='shop'),
     path("team/", team, name='team'),
+    path("login/", login, name='login'),
+    path("register/", register, name='register'),
+    path("forgot-password/", forgot_password, name='forgot-password'),
 ]
 
