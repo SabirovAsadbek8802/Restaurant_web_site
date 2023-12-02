@@ -1,21 +1,15 @@
-from django.shortcuts import render
-from django.http import HttpResponseRedirect
-from .models import Accounts
+from django.shortcuts import render, redirect
+from django.contrib.auth import login
+from .forms import SignupForm
 
 
-def registration(request):
-    return render(request, "register.html")
-
-
-def createpost(request):
+def register(request):
     if request.method == 'POST':
-        if request.POST.get('first_name') and request.POST.get('last_name'):
-            person = Accounts()
-            person.username = request.POST.get('username')
-            person.email = request.POST.get('email')
-            person.password = request.POST.get('password')
-            person.save()
-            return render(request, 'register.html')
-
+        form = SignupForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('home')
     else:
-        return render(request, 'login.html')
+        form = SignupForm()
+    return render(request, 'registration/register.html', {'form': form})

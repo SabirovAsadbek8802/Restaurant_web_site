@@ -1,12 +1,10 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 
-class Accounts(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    username = models.CharField(max_length=100, null=True)
-    email = models.EmailField()
-    password = models.IntegerField()
+class CustomUser(AbstractUser):
+    date_of_birth = models.DateField(null=True, blank=True)
+    address = models.TextField()
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name}"
+        return self.get_full_name()

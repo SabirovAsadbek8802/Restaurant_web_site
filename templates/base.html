@@ -12,6 +12,12 @@
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png' %}">
 
     <!-- css include -->
+
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+
+
     <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}">
@@ -100,7 +106,8 @@
                                             </form>
                                         </div>
                                     </div>
-                                    <div class="hamburger_menu">
+                                    {% if user.is_authenticated %}
+                                        <div class="hamburger_menu">
                                         <a href="javascript:void(0);">
                                             <div class="icon cart_btn d-none d-lg-block">
                                                 <i class="fal fa-shopping-basket"></i>
@@ -111,9 +118,17 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <a class="icon cart_wishlist d-none d-lg-block" href="#">
+                                        <a class="icon cart_wishlist d-none d-lg-block" href="#">
                                         <i class="fal fa-heart"></i>
+
+                                        <a class="icon cart_wishlist d-none d-lg-block" href="{% url 'logout' %}"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                                        <a class="icon cart_wishlist d-none d-lg-block" href="#"><i class="fa-regular fa-user"></i></a>
+
                                     </a>
+                                     {% else %}
+                                        <a class="icon cart_wishlist d-none d-lg-block" href="{% url 'register' %}">R</a>
+                                        <a class="icon cart_wishlist d-none d-lg-block" href="{% url 'login' %}">L</a>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
