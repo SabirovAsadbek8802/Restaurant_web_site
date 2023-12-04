@@ -27,6 +27,14 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+    @classmethod
+    def get_discount_percent(cls, product_instance):
+        if product_instance.discount is not None:
+            discount_as_int = int(product_instance.discount)
+            price_as_int = int(product_instance.price)
+            return int((discount_as_int / price_as_int) * 100)
+        return 10
+
 
 class ProductDetail(models.Model):
     products = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='detail')

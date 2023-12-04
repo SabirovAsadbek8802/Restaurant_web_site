@@ -69,16 +69,28 @@ def shop_details(request, name):
     product = Product.objects.filter(name=name).first()
     products = Product.objects.all()
     random_products = np.random.choice(products, 3, replace=False)
+
+    product_info = ProductInfo.objects.filter(products__name=name).all()
+    product_description = ProductDetail.objects.filter(products__name=name).all()
+
+    reviews = ProductReview.objects.filter(products__name=name).all()
+
     return render(request, "shop-details.html", {
         'product_details': product_detail,
         'product': product,
         'products': random_products,
+        'infos': product_info,
+        'descriptions': product_description,
+        'reviews': reviews,
     })
 
 
 @login_required()
 def shop_sidebar(request):
-    return render(request, "shop-sidebar.html")
+    product = Product.objects.all()
+    return render(request, "shop-sidebar.html", {
+        'product': product,
+    })
 
 
 @login_required()

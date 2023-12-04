@@ -654,7 +654,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat1 cat4 cat5">
                             <div class="shop_single white_bg">
                                 <div class="thumb text-center">
-                                    <a class="image" href="{% url 'shop-details' product.name %}"><img src="{% static 'assets/img/shop/img_01.png' %}" alt=""></a>
+                                    <a class="image" href="{% url 'shop-details' product.name %}"><img src="{{ product.images.first.image.url }}" alt="{{ product.images.name }}"></a>
                                     <div class="actions">
                                         <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
                                         <a href="#" class="action"><i class="fal fa-heart"></i></a>
@@ -663,7 +663,7 @@
                                 </div>
                                 <div class="content">
                                     <div class="s_top ul_li">
-                                        <span class="cat">Fizza</span>
+                                        <span class="cat">{{ product.category.name }}</span>
                                         <ul class="rating_star ul_li">
                                             <li><i class="fas fa-star"></i></li>
                                             <li><i class="fas fa-star"></i></li>
@@ -672,11 +672,16 @@
                                             <li><i class="fal fa-star"></i></li>
                                         </ul>
                                     </div>
-                                    <h3 class="title"><a href="">Unlimited Chicken fry</a></h3>
+                                    <h3 class="title"><a href="">{{ product.name }}</a></h3>
                                     <div class="s_bottom ul_li">
                                         <span>Price -</span>
-                                        <span class="new">$53.00</span>
-                                        <span class="old">$75.00</span>
+                                        {% if product.discount %}
+                                            <span class="new">${{ product.discount }}</span>
+                                                <span class="badge">{{ product.get_discount_percent }}%-</span>
+                                                <span class="old">${{ product.price }}</span>
+                                        {% else %}
+                                            <span class="new">${{ product.price }}</span>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
