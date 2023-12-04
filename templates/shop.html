@@ -81,39 +81,11 @@
                         </div>
                     </div>
                     <div class="row grid">
-                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat1 cat4 cat5">
+
+                     <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat2 cat6">
                             <div class="shop_single white_bg">
                                 <div class="thumb text-center">
-                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_01.png'%}" alt=""></a>
-                                    <div class="actions">
-                                        <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-heart"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <div class="s_top ul_li">
-                                        <span class="cat">Fizza</span>
-                                        <ul class="rating_star ul_li">
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fal fa-star"></i></li>
-                                            <li><i class="fal fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <h3 class="title"><a href="{% url 'shop-details' %}">Unlimited Chicken fry</a></h3>
-                                    <div class="s_bottom ul_li">
-                                        <span class="price">Price -</span>
-                                        <span>$53.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat2 cat6">
-                            <div class="shop_single white_bg">
-                                <div class="thumb text-center">
-                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_02.png'%}" alt=""></a>
+                                    <a class="image" href="shop-details.html"><img src="assets/img/shop/img_02.png" alt=""></a>
                                     <div class="actions">
                                         <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
                                         <a href="#" class="action"><i class="fal fa-heart"></i></a>
@@ -132,7 +104,7 @@
                                             <li><i class="fas fa-star"></i></li>
                                         </ul>
                                     </div>
-                                    <h3 class="title"><a href="{% url 'shop-details' %}">Bangladeshi Sendrues</a></h3>
+                                    <h3 class="title"><a href="shop-details.html">Bangladeshi Sendrues</a></h3>
                                     <div class="s_bottom ul_li">
                                         <span class="price">Price -</span>
                                         <span class="new">$53.00</span>
@@ -141,10 +113,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat4 cat1 cat3 cat5">
+
+
+
+                    {% for item in products %}
+                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat1 cat4 cat5">
                             <div class="shop_single white_bg">
                                 <div class="thumb text-center">
-                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_03.png'%}" alt=""></a>
+                                    <a class="image" href="{% url 'shop-details' item.name %}"><img src="{{ item.images.first.image.url }}" alt=""></a>
                                     <div class="actions">
                                         <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
                                         <a href="#" class="action"><i class="fal fa-heart"></i></a>
@@ -153,199 +129,32 @@
                                 </div>
                                 <div class="content">
                                     <div class="s_top ul_li">
-                                        <span class="cat">Full Burgar</span>
+                                        <span class="cat">{{ item.category }}</span>
                                         <ul class="rating_star ul_li">
+
                                             <li><i class="fas fa-star"></i></li>
                                             <li><i class="fas fa-star"></i></li>
                                             <li><i class="fas fa-star"></i></li>
                                             <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fal fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+
                                         </ul>
                                     </div>
-                                    <h3 class="title"><a href="{% url 'shop-details' %}">Double Stuck Burgar</a></h3>
+                                    <h3 class="title"><a href="{% url 'shop-details' item.name %}">{{ item.name }}</a></h3>
                                     <div class="s_bottom ul_li">
-                                        <span class="price">Price -</span>
-                                        <span>$33.00</span>
+                                        <span class="price">Price - </span>
+                                    {% if item.discount %}
+                                        <span class="new">${{ item.discount }}</span>
+                                        <span class="old">${{ item.price }}</span>
+                                    {% else %}
+                                        <span class="new">${{ item.price }}</span>
+                                    {% endif %}
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat1 cat6">
-                            <div class="shop_single white_bg">
-                                <div class="thumb text-center">
-                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_04.png'%}" alt=""></a>
-                                    <div class="actions">
-                                        <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-heart"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <div class="s_top ul_li">
-                                        <span class="cat">Full Burgar</span>
-                                        <ul class="rating_star ul_li">
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <h3 class="title"><a href="{% url 'shop-details' %}">Chinis Popular Noudlus</a></h3>
-                                    <div class="s_bottom ul_li">
-                                        <span class="price">Price -</span>
-                                        <span>$13.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat1 cat2 cat5">
-                            <div class="shop_single white_bg">
-                                <div class="thumb text-center">
-                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_05.png'%}" alt=""></a>
-                                    <div class="actions">
-                                        <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-heart"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <div class="s_top ul_li">
-                                        <span class="cat">Chicken</span>
-                                        <ul class="rating_star ul_li">
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fal fa-star"></i></li>
-                                            <li><i class="fal fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <h3 class="title"><a href="{% url 'shop-details' %}">Unlimited Full Chicken</a></h3>
-                                    <div class="s_bottom ul_li">
-                                        <span class="price">Price -</span>
-                                        <span class="new">$66.00</span>
-                                        <span class="old">$77.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat4 cat2">
-                            <div class="shop_single white_bg">
-                                <div class="thumb text-center">
-                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_06.png'%}" alt=""></a>
-                                    <div class="actions">
-                                        <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-heart"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-eye"></i></a>
-                                    </div>
-                                    <span class="badge">New</span>
-                                </div>
-                                <div class="content">
-                                    <div class="s_top ul_li">
-                                        <span class="cat">Full Burgar</span>
-                                        <ul class="rating_star ul_li">
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fal fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <h3 class="title"><a href="{% url 'shop-details' %}">Bangladeshi Sendrues</a></h3>
-                                    <div class="s_bottom ul_li">
-                                        <span class="price">Price -</span>
-                                        <span>$53.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat2 cat6">
-                            <div class="shop_single white_bg">
-                                <div class="thumb text-center">
-                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_07.png'%}" alt=""></a>
-                                    <div class="actions">
-                                        <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-heart"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <div class="s_top ul_li">
-                                        <span class="cat">Fizza</span>
-                                        <ul class="rating_star ul_li">
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fal fa-star"></i></li>
-                                            <li><i class="fal fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <h3 class="title"><a href="{% url 'shop-details' %}">Chinis Popular Noudlus</a></h3>
-                                    <div class="s_bottom ul_li">
-                                        <span class="price">Price -</span>
-                                        <span>$63.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat4 cat1 cat3 cat5">
-                            <div class="shop_single white_bg">
-                                <div class="thumb text-center">
-                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_08.png'%}" alt=""></a>
-                                    <div class="actions">
-                                        <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-heart"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <div class="s_top ul_li">
-                                        <span class="cat">Fizza</span>
-                                        <ul class="rating_star ul_li">
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fal fa-star"></i></li>
-                                            <li><i class="fal fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <h3 class="title"><a href="{% url 'shop-details' %}">Unlimited Chicken fry</a></h3>
-                                    <div class="s_bottom ul_li">
-                                        <span class="price">Price -</span>
-                                        <span>$53.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat1 cat5">
-                            <div class="shop_single white_bg">
-                                <div class="thumb text-center">
-                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_09.png'%}" alt=""></a>
-                                    <div class="actions">
-                                        <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-heart"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <div class="s_top ul_li">
-                                        <span class="cat">Fizza</span>
-                                        <ul class="rating_star ul_li">
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fal fa-star"></i></li>
-                                            <li><i class="fal fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <h3 class="title"><a href="{% url 'shop-details' %}">Unlimited Chicken fry</a></h3>
-                                    <div class="s_bottom ul_li">
-                                        <span class="price">Price -</span>
-                                        <span>$53.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    {% endfor %}
+
                     </div>
                     <div class="row">
                         <div class="col-12">

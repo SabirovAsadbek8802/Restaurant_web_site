@@ -86,54 +86,18 @@
                         <div class="col-l2">
                             <div class="recipe_menu_wrap">
                                 <ul class="nav nav-tabs recipe_menu" id="myTab" role="tablist">
+
+                                    {% for item in category %}
                                     <li class="nav-item" role="presentation">
                                         <a href="#" class="nav-link" id="nav-tab-01" data-bs-toggle="tab" data-bs-target="#tab-01" role="tab" aria-controls="tab-01" aria-selected="true">
                                             <span class="icon">
-                                                <img src="{% static 'assets/img/icon/m_icon_01.png' %}" alt="">
+                                                <img src="{{ item.image.url }}" alt="">
                                             </span>
-                                            <span class="title">Drinks</span>
+                                            <span class="title">{{ item.name }}</span>
                                         </a>
                                     </li>
-                                    <li class="nav-item" role="presentation">
-                                        <a href="#" class="nav-link active" id="nav-tab-02" data-bs-toggle="tab" data-bs-target="#tab-02" role="tab" aria-controls="tab-02" aria-selected="false">
-                                            <span class="icon">
-                                                <img src="{% static 'assets/img/icon/m_icon_02.png' %}" alt="">
-                                            </span>
-                                            <span class="title">Stack</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <a href="#" class="nav-link" id="nav-tab-03" data-bs-toggle="tab" data-bs-target="#tab-03" role="tab" aria-controls="tab-03" aria-selected="false">
-                                            <span class="icon">
-                                                <img src="{% static 'assets/img/icon/m_icon_03.png' %}" alt="">
-                                            </span>
-                                            <span class="title">Burger</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <a href="#" class="nav-link" id="nav-tab-04" data-bs-toggle="tab" data-bs-target="#tab-04" role="tab" aria-controls="tab-04" aria-selected="false">
-                                            <span class="icon">
-                                                <img src="{% static 'assets/img/icon/m_icon_04.png' %}" alt="">
-                                            </span>
-                                            <span class="title">Chicken</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <a href="#" class="nav-link" id="nav-tab-05" data-bs-toggle="tab" data-bs-target="#tab-05" role="tab" aria-controls="tab-05" aria-selected="false">
-                                            <span class="icon">
-                                                <img src="{% static 'assets/img/icon/m_icon_05.png' %}" alt="">
-                                            </span>
-                                            <span class="title">COm bo</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <a href="#" class="nav-link" id="nav-tab-06" data-bs-toggle="tab" data-bs-target="#tab-06" role="tab" aria-controls="tab-06" aria-selected="false">
-                                            <span class="icon">
-                                                <img src="{% static 'assets/img/icon/m_icon_06.png' %}" alt="">
-                                            </span>
-                                            <span class="title">Pizza</span>
-                                        </a>
-                                    </li>
+                                    {% endfor %}
+
                                   </ul>
                                   <div class="tab-content mt-70" id="myTabContent">
                                     <div class="tab-pane fade" id="tab-01" role="tabpanel" aria-labelledby="nav-tab-01">
@@ -630,7 +594,7 @@
                                     </div>
                                   </div>
                                   <div class="lm_btn text-center mt-50">
-                                    <a class="thm_btn thm_btn-2" href="#">load more Product</a>
+                                    <a class="thm_btn thm_btn-2" href="{% url 'menu' %}">load more Product</a>
                                   </div>
                             </div>
                         </div>
@@ -650,7 +614,7 @@
                                     <h2>We make the best <span>burger</span> in Your town</h2>
                                 </div>
                                 <ul class="offer_btn ul_li">
-                                    <li><a class="thm_btn thm_btn-2" href="shop-sidebar.html">order now</a></li>
+                                    <li><a class="thm_btn thm_btn-2" href="{% url 'shop-sidebar' %}">order now</a></li>
                                     <li>
                                         <div class="offer_price">
                                             <h4>$46.99 <span>$59.99</span></h4>
@@ -686,10 +650,11 @@
                         </div>
                     </div>
                     <div class="row grid">
-                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat1 cat4 cat5">
+                        {% for product in products %}
+                            <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat1 cat4 cat5">
                             <div class="shop_single white_bg">
                                 <div class="thumb text-center">
-                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_01.png' %}" alt=""></a>
+                                    <a class="image" href="{% url 'shop-details' product.name %}"><img src="{{ product.images.first.image.url }}" alt="{{ product.images.name }}"></a>
                                     <div class="actions">
                                         <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
                                         <a href="#" class="action"><i class="fal fa-heart"></i></a>
@@ -698,7 +663,7 @@
                                 </div>
                                 <div class="content">
                                     <div class="s_top ul_li">
-                                        <span class="cat">Fizza</span>
+                                        <span class="cat">{{ product.category.name }}</span>
                                         <ul class="rating_star ul_li">
                                             <li><i class="fas fa-star"></i></li>
                                             <li><i class="fas fa-star"></i></li>
@@ -707,172 +672,26 @@
                                             <li><i class="fal fa-star"></i></li>
                                         </ul>
                                     </div>
-                                    <h3 class="title"><a href="{% url 'shop-details' %}">Unlimited Chicken fry</a></h3>
+                                    <h3 class="title"><a href="">{{ product.name }}</a></h3>
                                     <div class="s_bottom ul_li">
                                         <span>Price -</span>
-                                        <span class="new">$53.00</span>
-                                        <span class="old">$75.00</span>
+                                        {% if product.discount %}
+                                            <span class="new">${{ product.discount }}</span>
+                                                <span class="badge">{{ product.get_discount_percent }}%-</span>
+                                                <span class="old">${{ product.price }}</span>
+                                        {% else %}
+                                            <span class="new">${{ product.price }}</span>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat2 cat6">
-                            <div class="shop_single white_bg">
-                                <div class="thumb text-center">
-                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_02.png' %}" alt=""></a>
-                                    <div class="actions">
-                                        <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-heart"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-eye"></i></a>
-                                    </div>
-                                    <span class="badge">10%-</span>
-                                </div>
-                                <div class="content">
-                                    <div class="s_top ul_li">
-                                        <span class="cat">Chicken</span>
-                                        <ul class="rating_star ul_li">
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <h3 class="title"><a href="{% url 'shop-details' %}">Bangladeshi Sendrues</a></h3>
-                                    <div class="s_bottom ul_li">
-                                        <span>Price -</span>
-                                        <span class="new">$53.00</span>
-                                        <span class="old">$75.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat4 cat3 cat1 cat2">
-                            <div class="shop_single white_bg">
-                                <div class="thumb text-center">
-                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_03.png' %}" alt=""></a>
-                                    <div class="actions">
-                                        <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-heart"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <div class="s_top ul_li">
-                                        <span class="cat">Full Burgar</span>
-                                        <ul class="rating_star ul_li">
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fal fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <h3 class="title"><a href="{% url 'shop-details' %}">Double Stuck Burgar</a></h3>
-                                    <div class="s_bottom ul_li">
-                                        <span>Price -</span>
-                                        <span class="new">$33.00</span>
-                                        <span class="old">$45.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat5 cat2 cat1">
-                            <div class="shop_single white_bg">
-                                <div class="thumb text-center">
-                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_04.png' %}" alt=""></a>
-                                    <div class="actions">
-                                        <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-heart"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <div class="s_top ul_li">
-                                        <span class="cat">Full Burgar</span>
-                                        <ul class="rating_star ul_li">
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <h3 class="title"><a href="{% url 'shop-details' %}">Chinis Popular Noudlus</a></h3>
-                                    <div class="s_bottom ul_li">
-                                        <span>Price -</span>
-                                        <span class="new">$13.00</span>
-                                        <span class="old">$17.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat4 cat2 cat6">
-                            <div class="shop_single white_bg">
-                                <div class="thumb text-center">
-                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_05.png' %}" alt=""></a>
-                                    <div class="actions">
-                                        <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-heart"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <div class="s_top ul_li">
-                                        <span class="cat">Chicken</span>
-                                        <ul class="rating_star ul_li">
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fal fa-star"></i></li>
-                                            <li><i class="fal fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <h3 class="title"><a href="{% url 'shop-details' %}">Unlimited Full Chicken</a></h3>
-                                    <div class="s_bottom ul_li">
-                                        <span>Price -</span>
-                                        <span class="new">$66.00</span>
-                                        <span class="old">$77.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat5 cat4 cat3 cat6">
-                            <div class="shop_single white_bg">
-                                <div class="thumb text-center">
-                                    <a class="image" href="{% url 'shop-details' %}"><img src="{% static 'assets/img/shop/img_06.png' %}" alt=""></a>
-                                    <div class="actions">
-                                        <a href="#" class="action"><i class="fal fa-shopping-basket"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-heart"></i></a>
-                                        <a href="#" class="action"><i class="fal fa-eye"></i></a>
-                                    </div>
-                                    <span class="badge">New</span>
-                                </div>
-                                <div class="content">
-                                    <div class="s_top ul_li">
-                                        <span class="cat">Full Burgar</span>
-                                        <ul class="rating_star ul_li">
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fal fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <h3 class="title"><a href="{% url 'shop-details' %}">Bangladeshi Sendrues</a></h3>
-                                    <div class="s_bottom ul_li">
-                                        <span>Price -</span>
-                                        <span class="new">$53.00</span>
-                                        <span class="old">$75.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                     <div class="row">
                         <div class="col-12">
                             <div class="ca_btn text-center pt-20">
-                                <a class="thm_btn thm_btn-2" href="shop.html">Sell All Product</a>
+                                <a class="thm_btn thm_btn-2" href="{% url 'shop' %}">Sell All Product</a>
                             </div>
                         </div>
                     </div>
@@ -955,13 +774,13 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="blog_single mb-30">
                                 <div class="blog_thumb">
-                                    <a href="blog-details.html">
+                                    <a href="{% url 'blog-details' %}">
                                         <img src="{% static 'assets/img/blog/blog_01.jpg' %}" alt="">
                                     </a>
                                 </div>
                                 <div class="blog_content">
                                     <span class="tag"><a href="#">Business</a></span>
-                                    <h3><a href="blog-details.html">Best Burger In Your Soci...</a></h3>
+                                    <h3><a href="{% url 'blog-details' %}">Best Burger In Your Soci...</a></h3>
                                     <p>Rorem ipsum dolor sit amet, consect dipisicing elit, sed do eiusmod temporey. </p>
                                     <ul class="blog_meta pt-10 ul_li">
                                         <li>By <a href="#">Admin</a></li>
@@ -973,13 +792,13 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="blog_single mb-30">
                                 <div class="blog_thumb">
-                                    <a href="blog-details.html">
+                                    <a href="{% url 'blog-details' %}">
                                         <img src="{% static 'assets/img/blog/blog_02.jpg' %}" alt="">
                                     </a>
                                 </div>
                                 <div class="blog_content">
                                     <span class="tag"><a href="#">Chicken</a></span>
-                                    <h3><a href="blog-details.html">12 speedy seafood recipes..</a></h3>
+                                    <h3><a href="{% url 'blog-details' %}">12 speedy seafood recipes..</a></h3>
                                     <p>Rorem ipsum dolor sit amet, consect dipisicing elit, sed do eiusmod temporey. </p>
                                     <ul class="blog_meta pt-10 ul_li">
                                         <li>By <a href="#">Admin</a></li>
@@ -991,13 +810,13 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="blog_single mb-30">
                                 <div class="blog_thumb">
-                                    <a href="blog-details.html">
+                                    <a href="{% url 'blog-details' %}">
                                         <img src="{% static 'assets/img/blog/blog_03.jpg' %}" alt="">
                                     </a>
                                 </div>
                                 <div class="blog_content">
                                     <span class="tag"><a href="#">Burgerey</a></span>
-                                    <h3><a href="blog-details.html">Who’s winning the fast...</a></h3>
+                                    <h3><a href="{% url 'blog-details' %}">Who’s winning the fast...</a></h3>
                                     <p>Rorem ipsum dolor sit amet, consect dipisicing elit, sed do eiusmod temporey. </p>
                                     <ul class="blog_meta pt-10 ul_li">
                                         <li>By <a href="#">Admin</a></li>
@@ -1010,7 +829,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="ca_btn text-center pt-20">
-                                <a class="thm_btn thm_btn-2" href="blog.html">Sell All Blog</a>
+                                <a class="thm_btn thm_btn-2" href="{% url 'blog' %}">Sell All Blog</a>
                             </div>
                         </div>
                     </div>
